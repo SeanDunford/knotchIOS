@@ -20,7 +20,8 @@
 		14468B5417A5C56100A48985 /* seanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14468B5217A5C56100A48985 /* seanViewController.xib */; };
 		14468B5C17A608D400A48985 /* knotch.m in Sources */ = {isa = PBXBuildFile; fileRef = 14468B5B17A608D400A48985 /* knotch.m */; };
 		14468B5F17A6142C00A48985 /* knotchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14468B5E17A6142C00A48985 /* knotchCell.m */; };
-		146A928C17A640360066CA24 /* topicArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 146A928B17A640360066CA24 /* topicArrow.png */; };
+		47D1127E17A79FC2005967C7 /* topicArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 47D1127D17A79FC2005967C7 /* topicArrow.png */; };
+		47D1128017A852DA005967C7 /* sentimentBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 47D1127F17A852DA005967C7 /* sentimentBar.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,7 +45,8 @@
 		14468B5B17A608D400A48985 /* knotch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = knotch.m; sourceTree = "<group>"; };
 		14468B5D17A6142C00A48985 /* knotchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = knotchCell.h; sourceTree = "<group>"; };
 		14468B5E17A6142C00A48985 /* knotchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = knotchCell.m; sourceTree = "<group>"; };
-		146A928B17A640360066CA24 /* topicArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = topicArrow.png; path = ../../knotchIOS/instructions/topicArrow.png; sourceTree = "<group>"; };
+		47D1127D17A79FC2005967C7 /* topicArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = topicArrow.png; path = ../../../instructions/topicArrow.png; sourceTree = "<group>"; };
+		47D1127F17A852DA005967C7 /* sentimentBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sentimentBar.png; path = ../../../instructions/sentimentBar.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,7 +125,8 @@
 		146A928A17A640180066CA24 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				146A928B17A640360066CA24 /* topicArrow.png */,
+				47D1127F17A852DA005967C7 /* sentimentBar.png */,
+				47D1127D17A79FC2005967C7 /* topicArrow.png */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -185,7 +188,8 @@
 				14468B4C17A5C56100A48985 /* Default@2x.png in Resources */,
 				14468B4E17A5C56100A48985 /* Default-568h@2x.png in Resources */,
 				14468B5417A5C56100A48985 /* seanViewController.xib in Resources */,
-				146A928C17A640360066CA24 /* topicArrow.png in Resources */,
+				47D1127E17A79FC2005967C7 /* topicArrow.png in Resources */,
+				47D1128017A852DA005967C7 /* sentimentBar.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,10 +10,8 @@
 #import "seanViewController.h"
 
 @interface knotchCell : UITableViewCell{
-    UILabel *topicLbl;
-    UIButton *topicBtn;
-    UIView *knotchSentiment;
-    UIImage *knotchQuotes;
+    UILabel     *topicLbl;
+    UIButton    *topicBtn;
     
     seanViewController *viewController;
 }
@@ -21,4 +19,6 @@
 @property (nonatomic, retain) UIButton *topicBtn;
 @property (nonatomic) seanViewController *viewController;
 @property (nonatomic) UIView *knotchSentiment;
+@property (nonatomic, retain) UILabel *knotchComment;
+@property (nonatomic, retain) UILabel *knotchQuotes; 
 @end

@@ -14,6 +14,6 @@
     
  }
 -(void)logButtonRow:(UIButton *)sender;
-
+-(void)initTableView;
 
 @end

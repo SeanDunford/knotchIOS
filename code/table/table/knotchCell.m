@@ -10,7 +10,7 @@
 #import "seanViewController.h"
 
 @implementation knotchCell
-@synthesize topicBtn, topicLbl, viewController; 
+@synthesize topicBtn, topicLbl, viewController, knotchSentiment, knotchComment, knotchQuotes;
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -29,20 +29,20 @@
         [topicBtn addTarget:self action:@selector(logButtonRow:) forControlEvents:UIControlEventTouchUpInside];
         [self.contentView addSubview:topicBtn];
         
-        knotchSentiment = [[UIView alloc]initWithFrame:CGRectMake(30, 40, 280, 200)];
+        knotchSentiment = [[UIView alloc]initWithFrame:CGRectMake(30, 40, 580, 200)];
         [knotchSentiment setBackgroundColor:[UIColor colorWithRed:(128.0 / 255.0) green:(90.0 / 255.0) blue:(200.0 / 255.0) alpha: 1]];
         [self.contentView addSubview:knotchSentiment];
 
-        UILabel *knotchQuotes = [[UILabel alloc]initWithFrame:CGRectMake(0, 10, 500, 50)];
+        knotchQuotes = [[UILabel alloc]initWithFrame:CGRectMake(0, 10, 500, 50)];
         [knotchQuotes setBackgroundColor:[UIColor colorWithRed:(128.0 / 255.0) green:(90.0 / 255.0) blue:(200.0 / 255.0) alpha: 0]];
         knotchQuotes.text = @"\"";
         knotchQuotes.Font = [UIFont systemFontOfSize:88.0];
-        [knotchSentiment addSubview:knotchQuotes];
+        [self.knotchSentiment addSubview:knotchQuotes];
         
-        UILabel *knotchComment = [[UILabel alloc]initWithFrame:CGRectMake(0, 60, 500, 50)];
-         [knotchComment setBackgroundColor:[UIColor colorWithRed:(128.0 / 255.0) green:(90.0 / 255.0) blue:(200.0 / 255.0) alpha: 0]];
-        knotchComment.tag = 101;
-        [knotchSentiment addSubview:knotchComment];
+        knotchComment= [[UILabel alloc]initWithFrame:CGRectMake(0, 10, 250, 200)];
+        [knotchComment setBackgroundColor:[UIColor colorWithRed:(0.0 / 255.0) green:(255 / 255.0) blue:(100/ 255.0) alpha: 0]];
+        //knotchComment.tag = 101;
+        [self.knotchSentiment addSubview:knotchComment];
         
     }
     return self;
