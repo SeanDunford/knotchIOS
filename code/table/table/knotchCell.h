@@ -20,5 +20,5 @@
 @property (nonatomic) seanViewController *viewController;
 @property (nonatomic) UIView *knotchSentiment;
 @property (nonatomic, retain) UILabel *knotchComment;
-@property (nonatomic, retain) UILabel *knotchQuotes; 
+@property (nonatomic, retain) UILabel *knotchQuotes;
 @end

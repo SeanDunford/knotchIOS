@@ -43,7 +43,6 @@
         [knotchComment setBackgroundColor:[UIColor colorWithRed:(0.0 / 255.0) green:(255 / 255.0) blue:(100/ 255.0) alpha: 0]];
         //knotchComment.tag = 101;
         [self.knotchSentiment addSubview:knotchComment];
-        
     }
     return self;
 }
