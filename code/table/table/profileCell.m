@@ -51,11 +51,11 @@
         
         UIImage *userImage     = [UIImage imageNamed: @"user.png"];
         //When to use _ or regular? Setter and getter in own class
-        profilePicture  = [[UIImageView alloc]initWithFrame:CGRectMake(15, 138, 85, 50)];
+        profilePicture  = [[UIImageView alloc]initWithFrame:CGRectMake(15, 118, 85, 50)];
         [profilePicture setBackgroundColor:[UIColor colorWithRed:0/255.0 green:100/255.0 blue:0/255.0 alpha:1.0]];
         [profilePicture setImage:userImage];
         
-        profilePicture.contentMode = UIViewContentModeScaleToFill; //UIViewContentModeScaleAspectFill;
+        profilePicture.contentMode = UIViewContentModeScaleAspectFill; //UIViewContentModeScaleToFill;
         [self.contentView addSubview:profilePicture];
         
         

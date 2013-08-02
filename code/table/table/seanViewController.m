@@ -33,9 +33,10 @@
 }
 -(void)reloadTableData:(userProfile *)profile withFeed:(userFeed *)feed{
     //updateTableData
-    knotch *aKnotch = knotches[0];
-    aKnotch.Title = profile.name;
-    knotches = feed.knotches; 
+    knotches = feed.knotches;
+    name = profile.name;
+    location = profile.location;
+    profilePicUrl = profile.picURI; 
     [mainTableView reloadData];
 }
 - (void)getKnotchUserFeed{
@@ -159,13 +160,14 @@
         profileCell *profCell = (profileCell *)[tableView dequeueReusableCellWithIdentifier:@"ProfileCell"];
         if (profCell == nil){
             profCell =  [[profileCell  alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"ProfileCell"];
+        }
             profCell.profileTopName.text = name;
             profCell.profileBottomName.text = name;
             NSURL *url = [NSURL URLWithString:profilePicUrl];
             NSData *data = [NSData dataWithContentsOfURL:url];
             UIImage *image = [UIImage imageWithData:data];
             profCell.profilePicture.image = image; 
-        }
+        
         profCell.viewController = self;
         
         cell =  (UITableViewCell *)profCell;
