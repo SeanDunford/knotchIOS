@@ -7,13 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "userProfile.h"
 @interface seanViewController : UIViewController{
     IBOutlet  UITableView *mainTableView;
     NSMutableArray *knotches;
+    NSDictionary *userFeed; 
+    
     
  }
 -(void)logButtonRow:(UIButton *)sender;
 -(void)initTableView;
-
+-(void)reloadTableData:(userProfile *)profile;
 @end

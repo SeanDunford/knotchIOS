@@ -12,7 +12,6 @@
 @interface knotchCell : UITableViewCell{
     UILabel     *topicLbl;
     UIButton    *topicBtn;
-    
     seanViewController *viewController;
 }
 @property (nonatomic, retain) UILabel *topicLbl;
