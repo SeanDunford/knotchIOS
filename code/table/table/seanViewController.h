@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "userProfile.h"
+#import "userFeed.h"
+
 @interface seanViewController : UIViewController{
     IBOutlet  UITableView *mainTableView;
     NSMutableArray *knotches;
@@ -17,5 +19,5 @@
  }
 -(void)logButtonRow:(UIButton *)sender;
 -(void)initTableView;
--(void)reloadTableData:(userProfile *)profile;
+-(void)reloadTableData:(userProfile *)profile withFeed:(userFeed *)feed;
 @end

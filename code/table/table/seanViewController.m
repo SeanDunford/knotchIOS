@@ -12,6 +12,7 @@
 #import "knotch.h"
 #import "knotchWebHandler.h"
 #import "userProfile.h"
+#import "userFeed.h"
 
 @interface seanViewController ()
 -(void)initTableView;
@@ -30,10 +31,11 @@
     [self getKnotchUserFeed];
     [self getKnotches:20];
 }
--(void)reloadTableData:(userProfile *)profile{
+-(void)reloadTableData:(userProfile *)profile withFeed:(userFeed *)feed{
     //updateTableData
     knotch *aKnotch = knotches[0];
     aKnotch.Title = profile.name;
+    knotches = feed.knotches; 
     [mainTableView reloadData];
 }
 - (void)getKnotchUserFeed{
@@ -177,10 +179,7 @@
         cell =  (UITableViewCell *)knotCell;
     }
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
-    if(userFeed.count >0)
-    {
-        //Dict has Info
-    }
+    
     return (UITableViewCell *)cell;
    }
 

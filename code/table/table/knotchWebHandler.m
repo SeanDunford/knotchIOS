@@ -8,6 +8,7 @@
 
 #import "knotchWebHandler.h"
 #import "userProfile.h"
+#import "userFeed.h"
 
 @implementation knotchWebHandler
 
@@ -24,7 +25,7 @@
 - (void)getUserFeed{
     responseData = [NSMutableData data];
     
-    (void)[[NSURLConnection alloc] initWithRequest:request delegate:self];
+    //(void)[[NSURLConnection alloc] initWithRequest:request delegate:self];
     [NSURLConnection connectionWithRequest:request delegate:self];
 }
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
@@ -50,20 +51,14 @@
     NSError *myError = nil;
     response = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableLeaves error:&myError];
     
-    // show all values
-    for(id key in response) {
-        
-        id value = [response objectForKey:key];
-        
-        NSString *keyAsString = (NSString *)key;
-        NSString *valueAsString = (NSString *)value;
-    }
     if(response.count > 0)
     {
         NSDictionary *userDictionary = response[@"userInfo"];
+        NSArray *knotchesArray = [response objectForKey:@"knotches"];
         userProfile *user = [[userProfile alloc]initWithDictionary:userDictionary];
+        userFeed *feed = [[userFeed alloc]initWithArray:knotchesArray];
         //buiild User feed pass to below
-        [callBackView reloadTableData:user];
+        [callBackView reloadTableData:user withFeed:feed];
         
     }
     else {

@@ -15,6 +15,8 @@
 {
         NSMutableArray *knotches;
         userProfile *profile;
-    
 }
+- (userFeed *)initWithArray:(NSArray *)aDictionary;
+
+@property (nonatomic, retain) NSMutableArray *knotches;
 @end
