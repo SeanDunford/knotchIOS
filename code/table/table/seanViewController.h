@@ -13,7 +13,10 @@
 @interface seanViewController : UIViewController{
     IBOutlet  UITableView *mainTableView;
     NSMutableArray *knotches;
-    NSDictionary *userFeed; 
+    NSDictionary *userFeed;
+    NSString *name;
+    NSString *profilePicUrl;
+    NSString *location; 
     
     
  }
