@@ -12,6 +12,7 @@
 
 @interface seanViewController : UIViewController{
     IBOutlet  UITableView *mainTableView;
+    IBOutlet  UILabel *profileTopName;
     NSMutableArray *knotches;
     NSDictionary *userFeed;
     NSString *name;
@@ -24,8 +25,7 @@
     float knotchesToGet;
     NSString *userId;
     int *sentimentCount[11];
-    
- }
+     }
 -(void)logButtonRow:(UIButton *)sender;
 -(void)initTableView;
 -(void)reloadTableData:(userProfile *)profile withFeed:(userFeed *)feed;

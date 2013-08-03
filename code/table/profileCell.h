@@ -12,7 +12,6 @@
 @interface profileCell : UITableViewCell{
     seanViewController *viewController;
 }
-@property (nonatomic, retain) UILabel *profileTopName;
 @property (nonatomic, retain) UIView *profileSentiment;
 @property (nonatomic, retain) UILabel *profileBottomName;
 @property (nonatomic, retain) UILabel *profileLocation;

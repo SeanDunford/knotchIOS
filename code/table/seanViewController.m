@@ -30,6 +30,9 @@
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    
+    
     [self getKnotchUserFeed];
     [self printFonts];
 }
@@ -58,7 +61,7 @@
     NSLog(@"%@",numGlory); 
     numFollowing    = profile.numFollowing;
     numFollowers    = profile.numFollowers;
-
+    profileTopName.text  = name;
     [mainTableView reloadData];
 }
 - (void)getKnotchUserFeed{
@@ -289,7 +292,7 @@
         }
         
             profCell.viewController = self;
-            profCell.profileTopName.text = name;
+            //profCell.profileTopName.text = name;
             profCell.profileBottomName.text = name;
             NSURL *url = [NSURL URLWithString:profilePicUrl];
             NSData *data = [NSData dataWithContentsOfURL:url];
