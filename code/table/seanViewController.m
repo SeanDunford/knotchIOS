@@ -68,7 +68,7 @@
     //500e3b57bbcd08696800000a
     //5019296f1f5dc55304003c58
     userId = @"500e3b57bbcd08696800000a";
-    knotchesToGet = 10;
+    knotchesToGet = 1000;
     NSString *count = [NSString stringWithFormat:@"%d", (int)knotchesToGet];
     knotchWebHandler *knotchWH = [[knotchWebHandler alloc]init:userId andCount:count andView:self];
     [knotchWH getUserFeed];
@@ -96,16 +96,17 @@
     UIView *gloryContainer      = [[UIView alloc] initWithFrame:CGRectMake(  0,   0,  80,  48)];
     UIView *followersContainer  = [[UIView alloc] initWithFrame:CGRectMake( 80,   0,  80,  48)];
     UIView *followingContainer  = [[UIView alloc] initWithFrame:CGRectMake(160,   0,  80,  48)];
-    UIView *userFollowingContainer = [[UIView alloc] initWithFrame:CGRectMake(240,   0,  80,  48)];
-   
+    UIImageView *followingIV      = [[UIImageView alloc]initWithFrame:CGRectMake(240,   0,  80,  48)];
+        
     UILabel *titleGlory         = [[UILabel alloc]initWithFrame:CGRectMake(  0,  24,  80,  24)];
     UILabel *numberGlory        = [[UILabel alloc]initWithFrame:CGRectMake(  0,  5,  80,  24)];
     UILabel *titleFollowers     = [[UILabel alloc]initWithFrame:CGRectMake(  0,  24,  80,  24)];
     UILabel *numberFollowers    = [[UILabel alloc]initWithFrame:CGRectMake(  0,  5,  80,  24)];
     UILabel *titleFollowing     = [[UILabel alloc]initWithFrame:CGRectMake(  0,  24,  80,  24)];
     UILabel *numberFollowing    = [[UILabel alloc]initWithFrame:CGRectMake(  0,  5,  80,  24)];
-    UILabel *following          = [[UILabel alloc]initWithFrame:CGRectMake(  0,  0,  65,  48)];
-        
+    UIImage *image              =  [UIImage imageNamed:@"following.png"]; 
+    followingIV.image = image;
+    
         
     titleGlory.backgroundColor      = [UIColor colorWithWhite:0 alpha:0];
     numberGlory.backgroundColor     = [UIColor colorWithWhite:0 alpha:0];
@@ -113,7 +114,6 @@
     numberFollowers.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
     titleFollowing.backgroundColor  = [UIColor colorWithWhite:0 alpha:0];
     numberFollowing.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
-    following.backgroundColor       = [UIColor colorWithWhite:0 alpha:0];
     
     titleGlory.text      = @"Glory";
     titleFollowers.text  = @"Followers";
@@ -127,17 +127,13 @@
     numberGlory.text     = [NSString stringWithFormat:@"%@",numGlory]; 
     numberFollowers.text = [NSString stringWithFormat:@"%@",numFollowers];
     numberFollowing.text = [NSString stringWithFormat:@"%@",numFollowing];
-    following.text       = @"✓Following"; 
+    //following.text       = @"✓Following";
 
     customFont = [UIFont fontWithName:@"Lato-Regular" size:18];
     [numberGlory setFont:customFont];
     [numberFollowers setFont:customFont];
     [numberFollowing setFont:customFont];
-    [following setTextColor:[UIColor whiteColor]];
     customFont = [UIFont fontWithName:@"Aller-Regular" size:12];
-    [following setFont:customFont];
-    following.adjustsFontSizeToFitWidth = YES;
-        
         
         
     titleGlory.textAlignment      = NSTextAlignmentCenter;
@@ -146,14 +142,10 @@
     numberGlory.textAlignment     = NSTextAlignmentCenter;
     numberFollowers.textAlignment = NSTextAlignmentCenter;
     numberFollowing.textAlignment = NSTextAlignmentCenter;
-    following.textAlignment       = NSTextAlignmentCenter;
-        
-
 
     [gloryContainer     setBackgroundColor:[UIColor colorWithRed:(243 / 255.0) green:(243 / 255.0) blue:(243/ 255.0) alpha: 1]];
     [followersContainer setBackgroundColor:[UIColor colorWithRed:(235 / 255.0) green:(235 / 255.0) blue:(235/ 255.0) alpha: 1]];
     [followingContainer setBackgroundColor:[UIColor colorWithRed:(227 / 255.0) green:(227 / 255.0) blue:(227/ 255.0) alpha: 1]];
-    [userFollowingContainer          setBackgroundColor:[UIColor colorWithRed:(000 / 255.0) green:(000 / 255.0) blue:(000/ 255.0) alpha: 1]];
         
     [gloryContainer addSubview:titleGlory];
     [gloryContainer addSubview:numberGlory];
@@ -164,12 +156,10 @@
     [followingContainer addSubview:titleFollowing];
     [followingContainer addSubview:numberFollowing];
     
-    [userFollowingContainer addSubview:following]; 
-    
     [headerView addSubview:gloryContainer];
     [headerView addSubview:followingContainer];
     [headerView addSubview:followersContainer];
-    [headerView addSubview:userFollowingContainer]; 
+    [headerView addSubview:followingIV]; 
     
     UIView *sentimentBar   = [[UIImageView alloc]initWithFrame:CGRectMake(0, 48, 320, 40)];
     [sentimentBar setBackgroundColor:[UIColor blackColor]];
@@ -202,49 +192,50 @@
         float x = 15;
         float totalWidth = 290;
         float width = 0;
+        float knotchCount = knotches.count; 
         //Not sure why i need 
         int count = sentimentCount[0];
-        width = (count  / knotchesToGet) * totalWidth;
+        width = (count  / knotchCount) * totalWidth;
         [sentiment0 setFrame:CGRectMake(x, 15, width, 10)];
         x +=width;
         count = sentimentCount[1];
-        width = (count  /knotchesToGet) * totalWidth;
+        width = (count  /knotchCount) * totalWidth;
         [sentiment1 setFrame:CGRectMake(x, 15, width, 10)];
         x +=width;
         count = sentimentCount[2];
-        width = (count  /knotchesToGet) * totalWidth;
+        width = (count  /knotchCount) * totalWidth;
         [sentiment2 setFrame:CGRectMake(x, 15, width, 10)];
         x +=width;
         count = sentimentCount[3];
-        width = (count  /knotchesToGet) * totalWidth;
+        width = (count  /knotchCount) * totalWidth;
         [sentiment3 setFrame:CGRectMake(x, 15, width, 10)];
         x +=width;
         count = sentimentCount[4];
-        width = ((count  /knotchesToGet) * totalWidth);
+        width = ((count  /knotchCount) * totalWidth);
         [sentiment4 setFrame:CGRectMake(x, 15, width, 10)];
         x +=width;
         count = sentimentCount[5];
-        width = (float)(count  /knotchesToGet) * totalWidth;
+        width = (float)(count  /knotchCount) * totalWidth;
         [sentiment5 setFrame:CGRectMake(x, 15, width, 10)];
         x +=width;
         count = sentimentCount[6];
-        width = (count  /knotchesToGet) * totalWidth;
+        width = (count  /knotchCount) * totalWidth;
         [sentiment6 setFrame:CGRectMake(x, 15, width, 10)];
         x +=width;
         count = sentimentCount[7];
-        width = (count  /knotchesToGet) * totalWidth;
+        width = (count  /knotchCount) * totalWidth;
         [sentiment7 setFrame:CGRectMake(x, 15, width, 10)];
         x +=width;
         count = sentimentCount[8];
-        width = (count  /knotchesToGet) * totalWidth;
+        width = (count  /knotchCount) * totalWidth;
         [sentiment8 setFrame:CGRectMake(x, 15, width, 10)];
         x +=width;
         count = sentimentCount[9];
-        width = (count  /knotchesToGet) * totalWidth;
+        width = (count  /knotchCount) * totalWidth;
         [sentiment9 setFrame:CGRectMake(x, 15, width, 10)];
         x +=width;
         count = sentimentCount[10];
-        width = (count /knotchesToGet) * totalWidth;
+        width = (count /knotchCount) * totalWidth;
         [sentiment10 setFrame:CGRectMake(x, 15, width, 10)];
         
         [sentimentBar addSubview:sentiment0];
