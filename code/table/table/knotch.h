@@ -11,6 +11,6 @@
 @interface knotch : NSObject
 @property (strong, nonatomic) NSString  *Title;
 @property (strong, nonatomic) NSString  *Comment;
-@property (assign, nonatomic) NSInteger *sentimentColor;
+@property (assign, nonatomic) NSInteger sentimentColor;
 
 @end

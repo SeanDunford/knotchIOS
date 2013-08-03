@@ -15,8 +15,12 @@
 {
         NSMutableArray *knotches;
         userProfile *profile;
+        NSInteger sentimentCount[11];
 }
-- (userFeed *)initWithArray:(NSArray *)aDictionary;
-
+- (userFeed *)initWithArray:(NSArray *)aArray;
+- (int) getMostUsedSentiment;
+- (int) getSentimentCount:(int)identifier;
 @property (nonatomic, retain) NSMutableArray *knotches;
+
+
 @end

@@ -50,7 +50,16 @@
     // convert to JSON
     NSError *myError = nil;
     response = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableLeaves error:&myError];
-    
+    for(id key in response) {
+        
+        id value = [response objectForKey:key];
+        
+        NSString *keyAsString = (NSString *)key;
+        NSString *valueAsString = (NSString *)value;
+        
+        NSLog(@"key: %@", keyAsString);
+        NSLog(@"value: %@", valueAsString);
+    }
     if(response.count > 0)
     {
         NSDictionary *userDictionary = response[@"userInfo"];

@@ -13,7 +13,11 @@
     @synthesize knotches;
 
 - (userFeed *)initWithArray:(NSArray *)aArray{
-        if(self = [super init])
+   
+    for (int i = 0; i < 11; i++)
+        sentimentCount[i] = 0;
+    
+    if(self = [super init])
         {
             if(aArray.count != 0)
             {
@@ -23,8 +27,11 @@
                     knotch *aKnotch = [[knotch alloc]init];
                     NSDictionary *aDict = aArray[i]; 
                     aKnotch.Title = aDict[@"topic"];
-                    aKnotch.Comment = aDict[@"comment"]; 
-                   // aKnotch.Comment = aDictionary[i].Comment;
+                    aKnotch.Comment = aDict[@"comment"];
+                    NSString *aString = aDict[@"sentiment"];
+                    NSInteger sentimentIndex = [aString integerValue];
+                    sentimentCount[sentimentIndex/2]++;
+                    aKnotch.sentimentColor = sentimentIndex;
                     [knotches addObject:aKnotch];
                 }
             }
@@ -34,5 +41,15 @@
         }
         return self; 
     }
-
+- (int) getMostUsedSentiment{
+    int result = 0;
+    for (int i = 0; i<11; i++) {
+        if(sentimentCount[i] > sentimentCount[result])
+            result = i;
+    }
+    return result;
+}
+- (int ) getSentimentCount:(int)identifier{
+    return sentimentCount[identifier];
+}
 @end

@@ -17,7 +17,13 @@
     NSString *name;
     NSString *profilePicUrl;
     NSString *location; 
-    
+    NSString *numGlory;
+    NSString *numFollowing;
+    NSString *numFollowers;
+    NSInteger profileSentiment;
+    float knotchesToGet;
+    NSString *userId;
+    int *sentimentCount[11];
     
  }
 -(void)logButtonRow:(UIButton *)sender;

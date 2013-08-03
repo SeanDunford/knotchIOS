@@ -17,8 +17,8 @@
         {
             name         = aDictionary[@"name"];
             location     = aDictionary[@"location"];
-            picURI       = aDictionary[@"profilePicUrl" ];
-            numGlory     = aDictionary[@"num_glory" ];
+            picURI       = aDictionary[@"profilePicUrl"];
+            numGlory     = aDictionary[@"num_glory"];
             numFollowers = aDictionary[@"num_following" ];
             numFollowing = aDictionary[@"num_followers"];
         }
