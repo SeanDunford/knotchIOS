@@ -14,6 +14,7 @@
 #import "userProfile.h"
 #import "userFeed.h"
 #import "colors.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface seanViewController ()
 -(void)initTableView;
@@ -30,6 +31,16 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [self getKnotchUserFeed];
+    [self printFonts];
+}
+-(void) printFonts{
+    for (NSString *name in [UIFont familyNames]) {
+        NSLog(@"Family name : %@", name);
+        for (NSString *font in [UIFont fontNamesForFamilyName:name]) {
+            NSLog(@"Font name : %@", font);
+        }
+    }
+
 }
 -(void)reloadTableData:(userProfile *)profile withFeed:(userFeed *)feed{
     //updateTableData
@@ -78,23 +89,53 @@
     UIView *headerView = nil;
     if(section == 1){
     //CGRectMake(<#CGFloat x#>, <#CGFloat y#>, <#CGFloat width#>, <#CGFloat height#>)
-    headerView                  = [[UIView alloc] initWithFrame:CGRectMake(0,    0, 320,   0)];
-    UILabel *titleGlory         = [[UILabel alloc]initWithFrame:CGRectMake(0,   21,  80,  21)];
-    UILabel *numberGlory        = [[UILabel alloc]initWithFrame:CGRectMake(0,    0,  80,  21)];
-    UILabel *titleFollowers     = [[UILabel alloc]initWithFrame:CGRectMake(80,  21,  80,  21)];
-    UILabel *numberFollowers    = [[UILabel alloc]initWithFrame:CGRectMake(80,   0,  80,  21)];
-    UILabel *titleFollowing     = [[UILabel alloc]initWithFrame:CGRectMake(160, 21,  80,  21)];
-    UILabel *numberFollowing    = [[UILabel alloc]initWithFrame:CGRectMake(160,  0,  80,  21)];
-    UILabel *following          = [[UILabel alloc]initWithFrame:CGRectMake(240,  0,  80,  42)];
+    headerView                  = [[UIView alloc] initWithFrame:CGRectMake(  0,   0, 320,   0)];
+    UIView *gloryContainer      = [[UIView alloc] initWithFrame:CGRectMake(  0,   0,  80,  48)];
+    UIView *followersContainer  = [[UIView alloc] initWithFrame:CGRectMake( 80,   0,  80,  48)];
+    UIView *followingContainer  = [[UIView alloc] initWithFrame:CGRectMake(160,   0,  80,  48)];
+    UIView *userFollowingContainer = [[UIView alloc] initWithFrame:CGRectMake(240,   0,  80,  48)];
+   
+    UILabel *titleGlory         = [[UILabel alloc]initWithFrame:CGRectMake(  0,  24,  80,  24)];
+    UILabel *numberGlory        = [[UILabel alloc]initWithFrame:CGRectMake(  0,  5,  80,  24)];
+    UILabel *titleFollowers     = [[UILabel alloc]initWithFrame:CGRectMake(  0,  24,  80,  24)];
+    UILabel *numberFollowers    = [[UILabel alloc]initWithFrame:CGRectMake(  0,  5,  80,  24)];
+    UILabel *titleFollowing     = [[UILabel alloc]initWithFrame:CGRectMake(  0,  24,  80,  24)];
+    UILabel *numberFollowing    = [[UILabel alloc]initWithFrame:CGRectMake(  0,  5,  80,  24)];
+    UILabel *following          = [[UILabel alloc]initWithFrame:CGRectMake(  0,  0,  65,  48)];
+        
+        
+    titleGlory.backgroundColor      = [UIColor colorWithWhite:0 alpha:0];
+    numberGlory.backgroundColor     = [UIColor colorWithWhite:0 alpha:0];
+    titleFollowers.backgroundColor  = [UIColor colorWithWhite:0 alpha:0];
+    numberFollowers.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
+    titleFollowing.backgroundColor  = [UIColor colorWithWhite:0 alpha:0];
+    numberFollowing.backgroundColor = [UIColor colorWithWhite:0 alpha:0];
+    following.backgroundColor       = [UIColor colorWithWhite:0 alpha:0];
     
     titleGlory.text      = @"Glory";
     titleFollowers.text  = @"Followers";
     titleFollowing.text  = @"Following";
+    UIFont *customFont = [UIFont fontWithName:@"Aller-Light" size:12];
+    
+    [titleGlory setFont:customFont];
+    [titleFollowers setFont:customFont];
+    [titleFollowing setFont:customFont]; 
         
     numberGlory.text     = [NSString stringWithFormat:@"%@",numGlory]; 
     numberFollowers.text = [NSString stringWithFormat:@"%@",numFollowers];
     numberFollowing.text = [NSString stringWithFormat:@"%@",numFollowing];
     following.text       = @"✓Following"; 
+
+    customFont = [UIFont fontWithName:@"Lato-Regular" size:18];
+    [numberGlory setFont:customFont];
+    [numberFollowers setFont:customFont];
+    [numberFollowing setFont:customFont];
+    [following setTextColor:[UIColor whiteColor]];
+    customFont = [UIFont fontWithName:@"Aller-Regular" size:12];
+    [following setFont:customFont];
+    following.adjustsFontSizeToFitWidth = YES;
+        
+        
         
     titleGlory.textAlignment      = NSTextAlignmentCenter;
     titleFollowers.textAlignment  = NSTextAlignmentCenter;
@@ -104,36 +145,30 @@
     numberFollowing.textAlignment = NSTextAlignmentCenter;
     following.textAlignment       = NSTextAlignmentCenter;
         
-    titleGlory.font      = [UIFont systemFontOfSize:11];
-    titleFollowers.font  = [UIFont systemFontOfSize:11];
-    titleFollowing.font  = [UIFont systemFontOfSize:11];
-        
-    numberGlory.font     = [UIFont systemFontOfSize:16];
-    numberFollowers.font = [UIFont systemFontOfSize:16];   
-    numberFollowing.font = [UIFont systemFontOfSize:16];   
-    following.font       = [UIFont systemFontOfSize:14];
 
-    [following setTextColor:[UIColor whiteColor]];
 
-    [titleGlory      setBackgroundColor:[UIColor colorWithRed: (243 / 255.0) green:(243 / 255.0) blue:(243/ 255.0) alpha: 1]];
-    [titleFollowers  setBackgroundColor:[UIColor colorWithRed: (235 / 255.0) green:(235 / 255.0) blue:(235/ 255.0) alpha: 1]];
-    [titleFollowing  setBackgroundColor:[UIColor colorWithRed: (227 / 255.0) green:(227 / 255.0) blue:(227/ 255.0) alpha: 1]];
-    [numberGlory     setBackgroundColor:[UIColor colorWithRed: (243 / 255.0) green:(243 / 255.0) blue:(243/ 255.0) alpha: 1]];
-    [numberFollowers setBackgroundColor:[UIColor colorWithRed: (235 / 255.0) green:(235 / 255.0) blue:(235/ 255.0) alpha: 1]];
-    [numberFollowing setBackgroundColor:[UIColor colorWithRed: (227 / 255.0) green:(227 / 255.0) blue:(227/ 255.0) alpha: 1]];
-    [following       setBackgroundColor:[UIColor colorWithRed: (000 / 255.0) green:(000 / 255.0) blue:(000/ 255.0) alpha: 1]];
+    [gloryContainer     setBackgroundColor:[UIColor colorWithRed:(243 / 255.0) green:(243 / 255.0) blue:(243/ 255.0) alpha: 1]];
+    [followersContainer setBackgroundColor:[UIColor colorWithRed:(235 / 255.0) green:(235 / 255.0) blue:(235/ 255.0) alpha: 1]];
+    [followingContainer setBackgroundColor:[UIColor colorWithRed:(227 / 255.0) green:(227 / 255.0) blue:(227/ 255.0) alpha: 1]];
+    [userFollowingContainer          setBackgroundColor:[UIColor colorWithRed:(000 / 255.0) green:(000 / 255.0) blue:(000/ 255.0) alpha: 1]];
         
-    [headerView addSubview:titleGlory];
-    [headerView addSubview:titleFollowers];
-    [headerView addSubview:titleFollowing];
-    
-    [headerView addSubview:numberGlory];
-    [headerView addSubview:numberFollowers];
-    [headerView addSubview:numberFollowing];
+    [gloryContainer addSubview:titleGlory];
+    [gloryContainer addSubview:numberGlory];
         
-    [headerView addSubview:following]; 
+    [followersContainer addSubview:titleFollowers];
+    [followersContainer addSubview:numberFollowers];
     
-    UIView *sentimentBar   = [[UIImageView alloc]initWithFrame:CGRectMake(0, 42, 320, 40)];
+    [followingContainer addSubview:titleFollowing];
+    [followingContainer addSubview:numberFollowing];
+    
+    [userFollowingContainer addSubview:following]; 
+    
+    [headerView addSubview:gloryContainer];
+    [headerView addSubview:followingContainer];
+    [headerView addSubview:followersContainer];
+    [headerView addSubview:userFollowingContainer]; 
+    
+    UIView *sentimentBar   = [[UIImageView alloc]initWithFrame:CGRectMake(0, 48, 320, 40)];
     [sentimentBar setBackgroundColor:[UIColor blackColor]];
     colors *colorFactory = [[colors alloc]init];
         
@@ -252,6 +287,7 @@
         if (profCell == nil){
             profCell =  [[profileCell  alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"ProfileCell"];
         }
+        
             profCell.viewController = self;
             profCell.profileTopName.text = name;
             profCell.profileBottomName.text = name;
@@ -280,14 +316,23 @@
             knotch *aKnotch = [knotches objectAtIndex:indexPath.row];
             [knotCell.topicLbl setText:[aKnotch Title]];
             [knotCell.knotchComment setText:[aKnotch Comment]];
-            knotCell.knotchComment.numberOfLines = 4;
-            knotCell.knotchComment.lineBreakMode = NSLineBreakByWordWrapping;
+
             knotCell.knotchSentiment.backgroundColor = [colorFactory getColorFromID:aKnotch.sentimentColor];
+            if (aKnotch.sentimentColor == 10)
+            {
+                knotCell.knotchSentiment.layer.borderColor = [UIColor blackColor].CGColor;
+                knotCell.knotchSentiment.layer.borderWidth = 1.0f;
+                knotCell.knotchQuotes.textColor = [UIColor blackColor]; 
+            }
+            else{
+                    knotCell.knotchSentiment.layer.borderWidth = 0.0f;
+                    knotCell.knotchQuotes.textColor = [UIColor whiteColor];
+                }
         }
         cell =  (UITableViewCell *)knotCell;
     }
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
-    
+    tableView.separatorColor = [UIColor clearColor];
     return (UITableViewCell *)cell;
    }
 
@@ -295,10 +340,10 @@
 {
     int height = 0;
     if(indexPath.section == 0){
-        height = 230;
+        height = 235;
     }
     else {
-        height = 120;
+        height = 155;
     }
     return height;
 }

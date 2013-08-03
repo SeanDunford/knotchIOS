@@ -20,27 +20,14 @@
 		14468B5417A5C56100A48985 /* seanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14468B5217A5C56100A48985 /* seanViewController.xib */; };
 		14468B5C17A608D400A48985 /* knotch.m in Sources */ = {isa = PBXBuildFile; fileRef = 14468B5B17A608D400A48985 /* knotch.m */; };
 		14468B5F17A6142C00A48985 /* knotchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14468B5E17A6142C00A48985 /* knotchCell.m */; };
-		4703B8B117AA31FD00A5D00E /* Aller_Bd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4703B8AA17AA31FD00A5D00E /* Aller_Bd.ttf */; };
-		4703B8B217AA31FD00A5D00E /* Aller_BdIt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4703B8AB17AA31FD00A5D00E /* Aller_BdIt.ttf */; };
-		4703B8B317AA31FD00A5D00E /* Aller_It.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4703B8AC17AA31FD00A5D00E /* Aller_It.ttf */; };
-		4703B8B417AA31FD00A5D00E /* Aller_Lt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4703B8AD17AA31FD00A5D00E /* Aller_Lt.ttf */; };
-		4703B8B517AA31FD00A5D00E /* Aller_LtIt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4703B8AE17AA31FD00A5D00E /* Aller_LtIt.ttf */; };
-		4703B8B617AA31FD00A5D00E /* Aller_Rg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4703B8AF17AA31FD00A5D00E /* Aller_Rg.ttf */; };
-		4703B8B717AA31FD00A5D00E /* AllerDisplay.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4703B8B017AA31FD00A5D00E /* AllerDisplay.ttf */; };
-		4703B8C217AA321700A5D00E /* Lato-Bla.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4703B8B817AA321700A5D00E /* Lato-Bla.ttf */; };
-		4703B8C317AA321700A5D00E /* Lato-BlaIta.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4703B8B917AA321700A5D00E /* Lato-BlaIta.ttf */; };
-		4703B8C417AA321700A5D00E /* Lato-Bol.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4703B8BA17AA321700A5D00E /* Lato-Bol.ttf */; };
-		4703B8C517AA321700A5D00E /* Lato-BolIta.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4703B8BB17AA321700A5D00E /* Lato-BolIta.ttf */; };
-		4703B8C617AA321700A5D00E /* Lato-Hai.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4703B8BC17AA321700A5D00E /* Lato-Hai.ttf */; };
-		4703B8C717AA321700A5D00E /* Lato-HaiIta.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4703B8BD17AA321700A5D00E /* Lato-HaiIta.ttf */; };
-		4703B8C817AA321700A5D00E /* Lato-Lig.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4703B8BE17AA321700A5D00E /* Lato-Lig.ttf */; };
-		4703B8C917AA321700A5D00E /* Lato-LigIta.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4703B8BF17AA321700A5D00E /* Lato-LigIta.ttf */; };
-		4703B8CA17AA321700A5D00E /* Lato-Reg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4703B8C017AA321700A5D00E /* Lato-Reg.ttf */; };
-		4703B8CB17AA321700A5D00E /* Lato-RegIta.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4703B8C117AA321700A5D00E /* Lato-RegIta.ttf */; };
 		4703B8CF17AB445700A5D00E /* userFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 4703B8CE17AB445700A5D00E /* userFeed.m */; };
 		4703B8D317AB449800A5D00E /* userProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 4703B8D217AB449800A5D00E /* userProfile.m */; };
 		4703B8D917AB497700A5D00E /* knotchWebHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 4703B8D817AB497700A5D00E /* knotchWebHandler.m */; };
 		47330BBE17AC550400730770 /* colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 47330BBD17AC550400730770 /* colors.m */; };
+		47330BC317ACFC1D00730770 /* Aller_Lt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 47330BC217ACFC1D00730770 /* Aller_Lt.ttf */; };
+		47330BC517ACFC4000730770 /* Lato-Reg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 47330BC417ACFC4000730770 /* Lato-Reg.ttf */; };
+		47330BC717ACFC5100730770 /* Lato-Lig.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 47330BC617ACFC5000730770 /* Lato-Lig.ttf */; };
+		4758104A17AD112D00A9E334 /* Aller_Rg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4758104917AD112D00A9E334 /* Aller_Rg.ttf */; };
 		47D1127E17A79FC2005967C7 /* topicArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 47D1127D17A79FC2005967C7 /* topicArrow.png */; };
 		47D1128017A852DA005967C7 /* sentimentBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 47D1127F17A852DA005967C7 /* sentimentBar.png */; };
 		47D1128317A86E9B005967C7 /* profileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47D1128217A86E9B005967C7 /* profileCell.m */; };
@@ -68,23 +55,6 @@
 		14468B5B17A608D400A48985 /* knotch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = knotch.m; sourceTree = "<group>"; };
 		14468B5D17A6142C00A48985 /* knotchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = knotchCell.h; sourceTree = "<group>"; };
 		14468B5E17A6142C00A48985 /* knotchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = knotchCell.m; sourceTree = "<group>"; };
-		4703B8AA17AA31FD00A5D00E /* Aller_Bd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Aller_Bd.ttf; path = ../../instructions/Aller/Aller_Bd.ttf; sourceTree = "<group>"; };
-		4703B8AB17AA31FD00A5D00E /* Aller_BdIt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Aller_BdIt.ttf; path = ../../instructions/Aller/Aller_BdIt.ttf; sourceTree = "<group>"; };
-		4703B8AC17AA31FD00A5D00E /* Aller_It.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Aller_It.ttf; path = ../../instructions/Aller/Aller_It.ttf; sourceTree = "<group>"; };
-		4703B8AD17AA31FD00A5D00E /* Aller_Lt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Aller_Lt.ttf; path = ../../instructions/Aller/Aller_Lt.ttf; sourceTree = "<group>"; };
-		4703B8AE17AA31FD00A5D00E /* Aller_LtIt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Aller_LtIt.ttf; path = ../../instructions/Aller/Aller_LtIt.ttf; sourceTree = "<group>"; };
-		4703B8AF17AA31FD00A5D00E /* Aller_Rg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Aller_Rg.ttf; path = ../../instructions/Aller/Aller_Rg.ttf; sourceTree = "<group>"; };
-		4703B8B017AA31FD00A5D00E /* AllerDisplay.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AllerDisplay.ttf; path = ../../instructions/Aller/AllerDisplay.ttf; sourceTree = "<group>"; };
-		4703B8B817AA321700A5D00E /* Lato-Bla.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Bla.ttf"; path = "../../instructions/lato/Lato-Bla.ttf"; sourceTree = "<group>"; };
-		4703B8B917AA321700A5D00E /* Lato-BlaIta.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-BlaIta.ttf"; path = "../../instructions/lato/Lato-BlaIta.ttf"; sourceTree = "<group>"; };
-		4703B8BA17AA321700A5D00E /* Lato-Bol.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Bol.ttf"; path = "../../instructions/lato/Lato-Bol.ttf"; sourceTree = "<group>"; };
-		4703B8BB17AA321700A5D00E /* Lato-BolIta.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-BolIta.ttf"; path = "../../instructions/lato/Lato-BolIta.ttf"; sourceTree = "<group>"; };
-		4703B8BC17AA321700A5D00E /* Lato-Hai.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Hai.ttf"; path = "../../instructions/lato/Lato-Hai.ttf"; sourceTree = "<group>"; };
-		4703B8BD17AA321700A5D00E /* Lato-HaiIta.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-HaiIta.ttf"; path = "../../instructions/lato/Lato-HaiIta.ttf"; sourceTree = "<group>"; };
-		4703B8BE17AA321700A5D00E /* Lato-Lig.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Lig.ttf"; path = "../../instructions/lato/Lato-Lig.ttf"; sourceTree = "<group>"; };
-		4703B8BF17AA321700A5D00E /* Lato-LigIta.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-LigIta.ttf"; path = "../../instructions/lato/Lato-LigIta.ttf"; sourceTree = "<group>"; };
-		4703B8C017AA321700A5D00E /* Lato-Reg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-Reg.ttf"; path = "../../instructions/lato/Lato-Reg.ttf"; sourceTree = "<group>"; };
-		4703B8C117AA321700A5D00E /* Lato-RegIta.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Lato-RegIta.ttf"; path = "../../instructions/lato/Lato-RegIta.ttf"; sourceTree = "<group>"; };
 		4703B8CD17AB445700A5D00E /* userFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = userFeed.h; sourceTree = "<group>"; };
 		4703B8CE17AB445700A5D00E /* userFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = userFeed.m; sourceTree = "<group>"; };
 		4703B8D117AB449800A5D00E /* userProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = userProfile.h; sourceTree = "<group>"; };
@@ -93,6 +63,10 @@
 		4703B8D817AB497700A5D00E /* knotchWebHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = knotchWebHandler.m; sourceTree = "<group>"; };
 		47330BBC17AC550400730770 /* colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = colors.h; sourceTree = "<group>"; };
 		47330BBD17AC550400730770 /* colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = colors.m; sourceTree = "<group>"; };
+		47330BC217ACFC1D00730770 /* Aller_Lt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Aller_Lt.ttf; sourceTree = "<group>"; };
+		47330BC417ACFC4000730770 /* Lato-Reg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Reg.ttf"; sourceTree = "<group>"; };
+		47330BC617ACFC5000730770 /* Lato-Lig.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Lig.ttf"; sourceTree = "<group>"; };
+		4758104917AD112D00A9E334 /* Aller_Rg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Aller_Rg.ttf; sourceTree = "<group>"; };
 		47D1127D17A79FC2005967C7 /* topicArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = topicArrow.png; path = ../../../instructions/topicArrow.png; sourceTree = "<group>"; };
 		47D1127F17A852DA005967C7 /* sentimentBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sentimentBar.png; path = ../../../instructions/sentimentBar.png; sourceTree = "<group>"; };
 		47D1128117A86E9B005967C7 /* profileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = profileCell.h; sourceTree = "<group>"; };
@@ -223,23 +197,10 @@
 		47D1128717A8CFAA005967C7 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				4703B8B817AA321700A5D00E /* Lato-Bla.ttf */,
-				4703B8B917AA321700A5D00E /* Lato-BlaIta.ttf */,
-				4703B8BA17AA321700A5D00E /* Lato-Bol.ttf */,
-				4703B8BB17AA321700A5D00E /* Lato-BolIta.ttf */,
-				4703B8BC17AA321700A5D00E /* Lato-Hai.ttf */,
-				4703B8BD17AA321700A5D00E /* Lato-HaiIta.ttf */,
-				4703B8BE17AA321700A5D00E /* Lato-Lig.ttf */,
-				4703B8BF17AA321700A5D00E /* Lato-LigIta.ttf */,
-				4703B8C017AA321700A5D00E /* Lato-Reg.ttf */,
-				4703B8C117AA321700A5D00E /* Lato-RegIta.ttf */,
-				4703B8AA17AA31FD00A5D00E /* Aller_Bd.ttf */,
-				4703B8AB17AA31FD00A5D00E /* Aller_BdIt.ttf */,
-				4703B8AC17AA31FD00A5D00E /* Aller_It.ttf */,
-				4703B8AD17AA31FD00A5D00E /* Aller_Lt.ttf */,
-				4703B8AE17AA31FD00A5D00E /* Aller_LtIt.ttf */,
-				4703B8AF17AA31FD00A5D00E /* Aller_Rg.ttf */,
-				4703B8B017AA31FD00A5D00E /* AllerDisplay.ttf */,
+				4758104917AD112D00A9E334 /* Aller_Rg.ttf */,
+				47330BC617ACFC5000730770 /* Lato-Lig.ttf */,
+				47330BC417ACFC4000730770 /* Lato-Reg.ttf */,
+				47330BC217ACFC1D00730770 /* Aller_Lt.ttf */,
 			);
 			name = Fonts;
 			sourceTree = "<group>";
@@ -304,23 +265,10 @@
 				47D1127E17A79FC2005967C7 /* topicArrow.png in Resources */,
 				47D1128017A852DA005967C7 /* sentimentBar.png in Resources */,
 				47D1128517A8B542005967C7 /* user.png in Resources */,
-				4703B8B117AA31FD00A5D00E /* Aller_Bd.ttf in Resources */,
-				4703B8B217AA31FD00A5D00E /* Aller_BdIt.ttf in Resources */,
-				4703B8B317AA31FD00A5D00E /* Aller_It.ttf in Resources */,
-				4703B8B417AA31FD00A5D00E /* Aller_Lt.ttf in Resources */,
-				4703B8B517AA31FD00A5D00E /* Aller_LtIt.ttf in Resources */,
-				4703B8B617AA31FD00A5D00E /* Aller_Rg.ttf in Resources */,
-				4703B8B717AA31FD00A5D00E /* AllerDisplay.ttf in Resources */,
-				4703B8C217AA321700A5D00E /* Lato-Bla.ttf in Resources */,
-				4703B8C317AA321700A5D00E /* Lato-BlaIta.ttf in Resources */,
-				4703B8C417AA321700A5D00E /* Lato-Bol.ttf in Resources */,
-				4703B8C517AA321700A5D00E /* Lato-BolIta.ttf in Resources */,
-				4703B8C617AA321700A5D00E /* Lato-Hai.ttf in Resources */,
-				4703B8C717AA321700A5D00E /* Lato-HaiIta.ttf in Resources */,
-				4703B8C817AA321700A5D00E /* Lato-Lig.ttf in Resources */,
-				4703B8C917AA321700A5D00E /* Lato-LigIta.ttf in Resources */,
-				4703B8CA17AA321700A5D00E /* Lato-Reg.ttf in Resources */,
-				4703B8CB17AA321700A5D00E /* Lato-RegIta.ttf in Resources */,
+				47330BC317ACFC1D00730770 /* Aller_Lt.ttf in Resources */,
+				47330BC517ACFC4000730770 /* Lato-Reg.ttf in Resources */,
+				47330BC717ACFC5100730770 /* Lato-Lig.ttf in Resources */,
+				4758104A17AD112D00A9E334 /* Aller_Rg.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
