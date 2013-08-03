@@ -17,9 +17,6 @@
 #import <QuartzCore/QuartzCore.h>
 
 @interface seanViewController ()
--(void)initTableView;
--(void)getUserFeedResponse;
--(void)getKnotches: (NSInteger) count;
 
 @end
 
@@ -27,23 +24,9 @@
 
 - (void)viewDidLoad
 {
-    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    
-    
-    
     [self getKnotchUserFeed];
-    [self printFonts];
-}
--(void) printFonts{
-    for (NSString *name in [UIFont familyNames]) {
-        NSLog(@"Family name : %@", name);
-        for (NSString *font in [UIFont fontNamesForFamilyName:name]) {
-            NSLog(@"Font name : %@", font);
-        }
-    }
-
 }
 -(void)reloadTableData:(userProfile *)profile withFeed:(userFeed *)feed{
     //updateTableData
@@ -194,47 +177,47 @@
         float width = 0;
         float knotchCount = knotches.count; 
         //Not sure why i need 
-        int count = sentimentCount[0];
+        int count = (int) sentimentCount[0];
         width = (count  / knotchCount) * totalWidth;
         [sentiment0 setFrame:CGRectMake(x, 15, width, 10)];
         x +=width;
-        count = sentimentCount[1];
+        count = (int) sentimentCount[1];
         width = (count  /knotchCount) * totalWidth;
         [sentiment1 setFrame:CGRectMake(x, 15, width, 10)];
         x +=width;
-        count = sentimentCount[2];
+        count = (int) sentimentCount[2];
         width = (count  /knotchCount) * totalWidth;
         [sentiment2 setFrame:CGRectMake(x, 15, width, 10)];
         x +=width;
-        count = sentimentCount[3];
+        count =(int)  sentimentCount[3];
         width = (count  /knotchCount) * totalWidth;
         [sentiment3 setFrame:CGRectMake(x, 15, width, 10)];
         x +=width;
-        count = sentimentCount[4];
+        count =(int)  sentimentCount[4];
         width = ((count  /knotchCount) * totalWidth);
         [sentiment4 setFrame:CGRectMake(x, 15, width, 10)];
         x +=width;
-        count = sentimentCount[5];
+        count =(int)  sentimentCount[5];
         width = (float)(count  /knotchCount) * totalWidth;
         [sentiment5 setFrame:CGRectMake(x, 15, width, 10)];
         x +=width;
-        count = sentimentCount[6];
+        count =(int)  sentimentCount[6];
         width = (count  /knotchCount) * totalWidth;
         [sentiment6 setFrame:CGRectMake(x, 15, width, 10)];
         x +=width;
-        count = sentimentCount[7];
+        count = (int) sentimentCount[7];
         width = (count  /knotchCount) * totalWidth;
         [sentiment7 setFrame:CGRectMake(x, 15, width, 10)];
         x +=width;
-        count = sentimentCount[8];
+        count = (int)  sentimentCount[8];
         width = (count  /knotchCount) * totalWidth;
         [sentiment8 setFrame:CGRectMake(x, 15, width, 10)];
         x +=width;
-        count = sentimentCount[9];
+        count = (int) sentimentCount[9];
         width = (count  /knotchCount) * totalWidth;
         [sentiment9 setFrame:CGRectMake(x, 15, width, 10)];
         x +=width;
-        count = sentimentCount[10];
+        count = (int) sentimentCount[10];
         width = (count /knotchCount) * totalWidth;
         [sentiment10 setFrame:CGRectMake(x, 15, width, 10)];
         

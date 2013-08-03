@@ -27,6 +27,5 @@
     int *sentimentCount[11];
      }
 -(void)logButtonRow:(UIButton *)sender;
--(void)initTableView;
 -(void)reloadTableData:(userProfile *)profile withFeed:(userFeed *)feed;
 @end
